@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR_EACH</title>
+</head>
+
+<body>
+    <p>----------------------MAP.forEach----------------------</p>
+    <p id="id1"></p>
+
+    <p>----------------------MAP.entries()----------------------</p>
+
+
+    <p id="id2"></p>
+    <p>----------------------MAP.key()----------------------</p>
+    <p id="id3"></p>
+    <p>----------------------MAP.value()----------------------</p>
+    <p id="id4"></p>
+
+
+
+    <script>
+        //create Map
+        let collage = new Map([
+            ["GECPATAN", 031],
+            ["GECRAJKOT", 468],
+            ["SILVEROAK", 988]
+        ]);
+
+        //forEach loop 
+        let text = "";
+        collage.forEach(function (value, key) {
+            text += key + '=' + value + "<br>"
+        })
+
+        document.getElementById("id1").innerHTML = text;
+
+
+        //Map.entries() 
+
+        let demo = "";
+        for (let y of collage.entries()) {
+            demo += y +"<br>";
+        }
+        document.getElementById("id2").innerHTML = demo;
+
+
+        let text1 = "";
+        for (let z of collage.keys()){
+            text1 += z+"<br>"
+        }
+        document.getElementById("id3").innerHTML = text1;
+
+
+        let dummy = "";
+        for (a of collage.values()){
+            dummy += a + "<br>";
+        }
+        document.getElementById("id4").innerHTML = dummy;
+    </script>
+
+</body>
+
+</html>

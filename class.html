@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class</title>
+</head>
+<body>
+    <h2>JavaScript Class</h2>
+    <p id="id1"></p>
+
+    <script>
+        class Employee{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        let emp1 = new Employee("Jp",21);
+        let emp2 = new Employee("Aryan",20);
+        document.getElementById("id1").innerHTML = emp1.name + " " + emp1.age;
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_as_key</title>
+</head>
+<p id="demo"></p>
+<script>
+    //create object
+
+    let apple = {name : "apple"};
+    let banana = {name : "banana"};
+    let orange = {name : "orange"};
+
+    //create map using set() method
+
+    let fruits = new Map();
+
+    fruits.set(apple,500);
+    fruits.set(banana,655);
+    fruits.set(orange,985);
+    document.getElementById("demo").innerHTML = fruits.get(apple);
+</script>
+<body>
+    
+</body>
+</html>

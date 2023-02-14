@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT MAP</title>
+</head>
+
+<body>
+    <p>----------------------CREATE MAP OBJECT USING new Map() METHOD----------------------</p>
+
+    <p id="id1"></p>
+
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <p>-----------------------CREATE MAP OBJECT USING SET() METHOD-------------------------</p>
+    <p id="id4"></p>
+
+    <p>----------------CHANGE EXISTING MAP OBJECT VALUE USING SET() METHOD-----------------</p>
+
+    <p id="id5"></p>
+
+    <p>----------------find number of elements in map object using Size() METHOD-----------------</p>
+    <p id="id6"></p>
+    <p>---------------- delete elements in map object using delete() METHOD-----------------</p>
+    <p id="id7"></p>
+    <p>---------------- remove all elements in map object using clear() METHOD-----------------</p>
+    <p id="id8"></p>
+
+    <p>---------------- Map.has() method return if key existing in map-----------------</p>
+    <p id="id9"></p>
+
+
+
+
+    <script>
+        //create map object fruits using new Map() and pass array
+        const fruits = new Map([
+            ["banana", 651],
+            ["apple", 566],
+            ["mango", 655]
+        ]);
+
+        document.getElementById("id1").innerHTML = fruits.get("banana"); // access from fruits map object using key banana
+
+        //create map object animal using new Map() and pass array
+
+        const animal = new Map([
+            ["lion", 100],
+            ["tiger", 102],
+            ["elephant", 566],
+            ["monkey", 1000]
+        ]);
+
+        document.getElementById("id2").innerHTML = animal.get("elephant");  // access from animal map object using key elephant
+        document.getElementById("id3").innerHTML = animal.get("monkey");    // access from animal map object using key monkey
+
+
+
+
+        //another way of creating Map object using set method
+
+        const cars = new Map();  //create new Map object
+
+
+        //set Map values using Set() methods
+        cars.set("VERNA",511);
+        cars.set("XUV700",897);
+        cars.set("AUDI",466);
+        document.getElementById("id4").innerHTML = cars.get("XUV700");
+
+
+        //set() method is used to change existing object value 
+
+        fruits.set("mango",1009);
+        document.getElementById("id5").innerHTML = fruits.get("mango");
+
+
+        //size() method return number of elements in map object
+        document.getElementById("id6").innerHTML = cars.size;
+
+
+        //Map.delete() used for delete specified element in map object
+
+        animal.delete("tiger")
+        
+        document.getElementById("id7").innerHTML = animal.size;
+
+
+        //Map.clear() method remove all elemenet from Map Object
+
+        cars.clear();
+        document.getElementById("id8").innerHTML = cars.size;
+
+        //Map.has() return true if key is existing in map object else false
+
+        document.getElementById("id9").innerHTML = animal.has("elephant");
+
+
+
+        
+    </script>
+
+</body>
+
+</html>
