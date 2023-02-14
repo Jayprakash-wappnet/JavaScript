@@ -33,3 +33,4 @@
 ### for_of loop
 
 => for iteration of given array and string.
+### forEach loop
