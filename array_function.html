@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function</title>
+</head>
+<body>
+    <p>----------------------Array.from()----------------------</p>
+    <p id="id1"></p>
+    <p>----------------------Array.keys()----------------------</p>
+    <p id="id2"></p>
+    <p>----------------------Array.find()----------------------</p>
+    <p id="id3"></p>
+    <p>----------------------Array.findIndex()----------------------</p>
+    <p id="id4"></p>
+
+    <script>
+        const myArray = Array.from("ABCDEF");
+        document.getElementById("id1").innerHTML = myArray;
+
+        let animal = ["Tiger","lion","Horse","Elephant"];
+        let keys = animal.keys();
+
+        let text = "";
+        for (let x of keys){
+            text += x + "<br>";
+        }
+        document.getElementById("id2").innerHTML = text;
+
+        const number = [12,45,87,98,65,55];
+        const first = number.find(myfun);
+        document.getElementById("id3").innerHTML= "FIrst number over 80 is:" +first;
+
+        function myfun(value,index,Array){
+            return value > 80;
+        }
+
+        const fin = number.findIndex(myfunction);
+        document.getElementById("id4").innerHTML = "The number over 80 index is:" + fin;
+
+        function myfunction(value,index,array){
+            return value > 80;
+        }
+
+
+    </script>
+</body>
+</html>

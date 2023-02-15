@@ -1,0 +1,59 @@
+<!--console.log("Statrt");
+setTimeout(function(){console.log("This is demo code for callback");},2000)
+console.log("End");-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
+    <script>
+        function mydisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function myFirst() {
+            mydisplayer("HIIIII....");
+        }
+
+        function mylast() {
+            mydisplayer("BYEE..!!!");
+        }
+
+        mylast();
+        myFirst();
+
+
+        function mycalculator(num1, num2, mycallback) {
+            let sum = num1 + num2;
+            mycallback(sum);
+        }
+
+        //let result = mycalculator(65,7);
+
+        mycalculator(5, 4, mydisplayer);
+
+
+        setInterval(myfun, 2000);
+        function myfun() {
+            let d = new Date();
+            document.getElementById("demo3").innerHTML = 
+            d.getHours() + ":" +
+            d.getMinutes() + ":" +
+            d.getSeconds();
+        }
+
+
+    </script>
+</body>
+
+</html>

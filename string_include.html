@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <p>-----------------String.include() method-----------------</p>
+    <p id="demo"></p>
+    <p>-----------------String.startsWith() method-----------------</p>
+    <p id="id"></p>
+    <p>-----------------String.endsWith() method-----------------</p>
+    <p id="id1"></p>
+    <p>-----------------String.replaceAll() method-----------------</p>
+    <p id="id2"></p>
+
+    <script>
+        let sentence = "Hello Jayprakash you how you are you";
+        document.getElementById("demo").innerHTML = sentence.includes("you"); //include() method return true because "you" is present in sentence
+        document.getElementById("id").innerHTML = sentence.startsWith("Hello");
+        document.getElementById("id1").innerHTML = sentence.endsWith("you");
+        text = sentence.replaceAll("you","we");
+        document.getElementById("id2").innerHTML = text;
+    </script>
+    
+</body>
+</html>
